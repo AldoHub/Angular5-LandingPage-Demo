@@ -1,1 +1,461 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0;
+    margin: 0;
+    background: #222;
+    font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+body * {
+    transition: all 0.400s ease-in-out;
+}
+
+h1, h2, h3, h4 {
+    font-family:Merriweather, Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 1500px;  
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 10px 18px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 18px -7px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 18px -7px rgba(0,0,0,0.75);
+    background: #fff;
+    color:#111;
+  
+}
+nav {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; 
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    z-index: 99;
+    align-items: center;
+ 
+}
+nav ul:first-of-type {
+    padding-left: 20px;
+}
+
+
+
+nav ul:first-of-type li:first-of-type a {
+    color: #eee;
+    font-weight: bold;
+    font-size: 1.4rem;
+   
+}
+nav ul:last-of-type {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.medium-nav {
+    text-align: right;
+}
+
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+
+}
+nav ul:last-of-type li:last-of-type a {
+    background: deeppink;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+header {
+    background: url("/assets/anete-lusina-609864-unsplash.jpg");
+    background-position: bottom;
+    background-size: 100%;
+    height: 800px;
+    position: relative;
+    color: #fff;
+      
+}
+header .tagline {
+     padding-top: 120px;
+     position: relative;
+     z-index: 2;
+     padding-left: 20px;
+    
+}
+ 
+header .tagline h1 {
+   font-size: 4rem;
+   line-height: 4rem;
+}
+ 
+header .tagline p {
+     width: 40%;    
+}
+header .tagline a {
+     font-weight:bold;
+}
+ 
+
+.contact, .learn-more {
+    padding: 12px;
+    border-radius: 2px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.1rem;
+    width: 100px;
+   
+   
+    
+}
+.contact {
+background: deeppink;
+text-decoration:none;
+color: #eee;
+}
+.learn-more {
+   color:#fff;
+} 
+ 
+ header img {
+     top: 600px;
+     position: absolute;
+     width: 740px;
+     right: 10%;
+     display: block;
+     z-index: 9;
+ }
+
+.overlay {
+    width: 100%;
+    height: 800px;
+    background: #222;
+    position: absolute;
+    top: 0;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+
+
+
+main {
+    margin-top: 300px;
+    padding:0px;
+
+}
+
+main div h3, main div div h3 {
+    font-size: 2rem;
+}
+
+
+main div.intro, main div.multi-section,  main div.multi-section-two {
+    
+    margin:0px auto;
+
+    padding: 50px;
+    
+
+}
+main div.intro {
+    width: 40%;
+    text-align: center;
+}
+div.multi-section, div.multi-section-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    background: #eee;
+   
+}
+div.multi-section img, div.multi-section-two img{
+    width: 100%;
+}
+
+.a {
+    grid-area: a;
+}
+.b{
+    grid-area: b;
+}
+div.multi-section-two {
+    grid-template-areas: "b a";
+ 
+}
+main div:last-of-type{
+    text-align: center;
+}
+
+
+footer {
+    background: #eee;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;        
+    justify-items: center;
+    align-items: top;
+    margin-top: 40px;
+}
+footer ul {
+    padding: 10px;
+width: 40%;
+list-style-type:none;
+}
+footer ul li {
+    margin: 10px;
+}
+footer ul li a {
+    color: #111;
+    text-decoration: none;
+}
+footer ul li:first-of-type {
+    font-weight: bold;
+    color: #ddd;
+}
+
+/*------------------------- MEDIA QUERIES ---------------------------*/
+
+@media (max-width:1300px) and (min-width:1000px) {
+    nav {
+        grid-template-columns: 1fr 2fr 1fr; 
+     
+    }
+    header {
+        height: 600px;
+    }
+    
+    header .tagline {
+        padding-top: 50px;       
+    }    
+     
+    header img {
+        top: 420px;
+        position: absolute;
+        width: 600px;
+        
+    }
+    .overlay {
+        height: 600px;
+        
+    }
+    main div.intro {
+        width: 80%;
+    }
+    main div.intro, main div.multi-section,  main div.multi-section-two {
+        padding: 10px;
+        margin: 50px auto;
+    }
+    main {
+        margin-top: 150px;
+    }
+}
+
+
+
+@media (max-width:999px) and (min-width:750px) {
+    nav {
+       
+        grid-template-columns: 1fr 1fr; 
+     
+        width: 100%;
+       
+     
+     
+    }
+     
+    header .tagline {
+        padding-top: 0px;       
+    }    
+    .medium-nav {
+        display: none;
+    }
+    header {
+        height: 450px;
+       
+    }
+    header .tagline h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    header .tagline p {
+        width: 60%;
+    }
+    .overlay {
+        height: 450px;
+        
+    }    
+    header img {
+        top: 360px;
+        position: absolute;
+        width: 65%;
+        
+    }
+    
+    main div.intro {
+        width: 80%;
+    }
+    main div.intro, main div.multi-section,  main div.multi-section-two {
+        padding: 10px;
+        margin: 50px auto;
+    }
+    main {
+        margin-top: 250px;
+    }
+   
+    div.multi-section, div.multi-section-two {
+       display: block;
+       
+    }
+
+    div.multi-section img, div.multi-section-two img{
+        width: 40%;
+        margin: 0px auto;
+        display: block;
+    }
+  
+}
+
+@media (max-width:749px) and (min-width:600px) {
+    nav {
+       
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+       
+    }
+     
+    header .tagline {
+        padding-top: 0px;       
+    }    
+    .medium-nav {
+        display: none;
+    }
+    header {
+        height: 250px;
+       
+    }
+    header .tagline h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    header .tagline p {
+        display: none;
+    }
+    .overlay {
+        height: 250px;
+        
+    }    
+    header img {
+        top: 300px;
+        position: absolute;
+        width: 300px;
+        
+    }
+    
+    main div.intro {
+        width: 80%;
+    }
+    main div.intro, main div.multi-section,  main div.multi-section-two {
+        padding: 10px;
+        margin: 50px auto;
+    }
+    main {
+        margin-top: 250px;
+    }
+   
+    div.multi-section, div.multi-section-two {
+       display: block;
+       
+    }
+
+    div.multi-section img, div.multi-section-two img{
+        width: 40%;
+        margin: 0px auto;
+        display: block;
+    }
+    footer {
+        background: #eee;
+        display: grid;
+        grid-template-columns: 1fr 1fr;        
+        justify-items: center;
+        align-items: top;
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-width:599px) and (min-width:320px) {
+    nav {
+       
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+       
+    }
+    .medium-nav {
+        display: none;
+    }
+    nav ul:last-of-type{
+        display: none;
+    }
+     
+    header .tagline {
+        padding-top: 0px;       
+    }    
+  
+    header {
+        height: 350px;
+         background-size: 200%;    
+    }
+    header .tagline h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    header .tagline p {
+        display: none;
+    }
+
+    .overlay {
+      height: 350px;
+    }    
+    header img {
+        top: 340px;
+        position: absolute;
+        width: 300px;
+        right: 5%;
+        
+    }
+    
+    main div.intro {
+        width: 80%;
+    }
+    main div.intro, main div.multi-section,  main div.multi-section-two {
+        padding: 10px;
+        margin: 50px auto;
+    }
+    main {
+        margin-top: 200px;
+    }
+   
+    div.multi-section, div.multi-section-two {
+       display: block;
+       
+    }
+
+    div.multi-section img, div.multi-section-two img{
+        width: 70%;
+        margin: 0px auto;
+        display: block;
+    }
+    footer {
+     
+        grid-template-columns: 1fr;     
+        text-align: center;   
+        padding: 0;
+      
+    }
+}
